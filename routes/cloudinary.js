@@ -6,11 +6,12 @@ const cloudinary = require('cloudinary').v2;
 
 const router = express.Router();
 const upload = multer();
+require('dotenv').config();
 
 cloudinary.config({
-  cloud_name:"dmix1720n",
-  api_key: "291284748646961",
-  api_secret: "cZb6pQUT3f79ZfKstZk-PqYpf9c",
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
 
